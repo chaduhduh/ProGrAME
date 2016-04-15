@@ -1,0 +1,494 @@
+/*
+|-------------------------------------------------------
+| ProGrAME
+|-------------------------------------------------------
+| - font-family: 'Source Sans Pro', sans-serif;
+*/
+*{
+	box-sizing: border-box;
+}
+.mainCont{
+    margin: 0 auto 0;
+    width: 775px;
+    max-width: 100%;
+    position: relative;
+    background-color: red;
+}
+.prgm.frame{
+	margin: -8px auto 175px;
+	width: 775px;
+	background-color: #211f1f;
+	overflow: hidden;
+	position: relative;
+	display: block;
+	 padding-bottom: 90px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+     -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+}
+/*.prgm.frame.mainMenu{
+    opacity: 1;
+    position: relative;
+    display: block;
+}*/
+.prgm.frame.active{
+    opacity: 1;
+    z-index: 100;
+}
+.prgm.frame .frameInner{
+	padding: 30px;
+}
+
+.prgm.frame .title.text{
+    font-size: 29px;
+    padding: 40px;
+    position: relative;
+    top: 10px;
+}
+.prgm.frame .menuBar{
+	display: block;
+	width: 100%;
+	padding: 3px 0 5px;
+	height: 100px;
+}
+.prgm.frame .menuBar .icon{
+	display: block;
+    cursor: pointer;
+	background-image: url("/sprites/sprite-game-menu.png");
+}
+.prgm.frame .menuBar .icon.back{
+	float: left;
+    height: 45px;
+    width: 65px;
+}
+.prgm.frame .menuBar .icon.info{
+	background-position: -88px 0;
+    float: right;
+    height: 60px;
+    width: 59px;
+    cursor: pointer;
+}
+/*.prgm.frame .menuBar .icon.info:hover .instructions,*/
+.prgm.frame .menuBar .icon.info.open .instructions{
+    opacity: 1;
+    display: block;
+}
+.prgm.frame .instructions{
+     background-color: #000000;
+    box-shadow: 84px -3px 33px 4px #000;
+    line-height: 30px;
+    opacity: 0;
+    padding:20px 55px 25px 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    width: 575px;
+    z-index: 300;
+    -webkit-transition: all 600ms ease-in-out;
+    -moz-transition: all 600ms ease-in-out;
+    -o-transition: all 600ms ease-in-out;
+    transition: all 600ms ease-in-out;
+}
+.prgm.frame .instructions .closeIcon{
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-family: helvetica;
+    font-size: 20px;
+    height: 30px;
+    opacity: 0.41;
+    position: absolute;
+    right: 18px;
+    top: 16px;
+    width: 30px;
+    z-index: 30;
+}
+.prgm.frame .headingText{
+	display: inline-block;
+    padding: 15px 30px;
+    width: 100%;
+}
+.prgm.frame .text{
+	color: #fff;
+    font-family: "Source Sans Pro",sans-serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+.prgm.frame .text.large{
+    font-size: 31px;
+    line-height: 21px;
+}
+.prgm.frame .pieceArea,
+.prgm.frame .gameArea{
+	background: none repeat scroll 0 0 #272525;
+    display: block;
+    margin-bottom: 0;
+    padding-bottom: 25px;
+    position: relative;
+}
+.prgm.frame .gameArea{
+	min-height: 100px;
+}
+.prgm.frame .row{
+	padding: 0 15px;
+	display: inline-block;
+	width: 100%;
+	position: relative;
+}
+.prgm.frame .row.indent{
+    padding-left: 50px;
+}
+.prgm.frame .piece{
+	display: inline-block;
+    padding: 14px 0 0;
+    text-align: center;
+    height: 50px;
+    width: 89px;
+	background-color: #d6d6d6;
+	margin: 0 1.2% 15px;
+	vertical-align: top;
+	-webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ea;se-in-out;
+    -o-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+}
+.prgm.frame .piece.selected{
+	box-shadow: 0 0 3px 2px #ffffff;
+}
+.prgm.frame .gameArea .text.current{
+    color: #76eec4;
+}
+.prgm.frame .gameArea .piece.selected{
+	box-shadow: none;
+}
+.prgm.frame .piece.twoline{
+    letter-spacing: 2px;
+    line-height: 15px;
+    padding: 10px 0 0;
+}
+/*
+|
+| -- Piece Types
+|
+*/
+.prgm.frame .piece.start{background-color: #537838;}
+.prgm.frame .piece.end{background-color: #841224;}
+.prgm.frame .piece.action{background-color: #4650a8;}
+.prgm.frame .piece.value{background-color: #0d7c62;}
+.prgm.frame .operator{background-color: #622a5b;}
+.prgm.frame .num{background-color: #56B2D1;}
+.prgm.frame .string.text{
+    background-color: yellow;
+    background-color: #afaf11;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 24px;
+    text-shadow: 0 0 1px #393939;
+}
+.prgm.frame .left{
+	float: left;
+}
+.prgm.frame .right{
+	float: right;
+}
+.prgm.frame .gameArea{}
+.prgm.frame .gameArea .piece{
+	float: right;
+	margin: 0;
+    /*height: 49px;
+    margin: 0;
+    width: 89px;*/
+}
+.prgm.frame .pieceHolder{
+	background-color: #211f1f;
+    display: inline-block;
+    float: left;
+    height: 60px;
+    margin-bottom: 15px;
+    margin-right: 1%;
+    padding: 5px;
+    width: 15%;
+    cursor: pointer;
+}
+.prgm.frame .row .pieceHolder:nth-child(5){
+	margin-right: 0;/* no margin on last */
+}
+.prgm.frame .runButtonCont{
+	
+}
+.prgm.frame .runButtonCont button{
+	background-color: #743232;
+    border: medium none;
+    bottom: 0;
+    box-shadow: 0 -12px 9px -12px #000000;
+    display: block;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 23px;
+    height: 70px;
+    left: 0;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 775px;
+    z-index: 100;
+    color: #fff;
+    cursor: pointer;
+}
+.prgm.frame .runButtonCont button:hover{
+	background-color: #6d2b2b;
+	-webkit-transition: all 290ms ease-in-out;
+    -moz-transition: all 290ms ea;se-in-out;
+    -o-transition: all 290ms ease-in-out;
+    transition: all 290ms ease-in-out;
+    padding-top: 1px;
+    padding-left: 8px;		
+}
+
+.text{
+    color: #fff;
+    font-family: "Source Sans Pro",sans-serif;
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+.center{
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+.prgm.frame.mainMenu{
+    padding-top: 40px;
+}
+.prgm.frame.mainMenu.active{
+    /*z-index: 500;*/
+}
+.prgm.frame.mainMenu .title.text{
+    font-size: 53px;
+    letter-spacing: 7px;
+    top: -30px;
+}
+.prgm.frame.mainMenu .headingText{
+    padding: 20px 136px;
+}
+.prgm.frame.mainMenu .buttonArea .button{
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-right: 4px;
+    padding: 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+.prgm.frame.mainMenu .buttonArea .button:hover{
+     border: solid 1px #FA1616;
+     color: #FA1616;
+}
+.prgm.frame.mainMenu .buttonArea .row{
+    padding: 0 138px;
+}
+.side{
+    background-color: #272525;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    display: block;
+    max-width: 100%;
+    width: 775px;
+    height: auto;
+    margin: -8px auto 0;
+    max-height: 0;
+    padding: 14px 73px 40px 70px;
+    -webkit-transition: all 150ms ease-in-out;
+    -moz-transition: all 150ms ease-in-out;
+    -o-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    display: none;
+}
+.side.open{
+    margin: -8px auto 8px;
+    padding: 45px 73px 40px 70px;
+    max-height: none;
+}
+.side .levelBarLink{
+     color: #6f6b6b;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    height: 47px;
+    left: -45px;
+    margin-bottom: 0;
+    padding-top: 13px;
+    position: relative;
+    top: -12px;
+    width: 114%;
+}
+.side .levelBarLink.hidelevels{
+    display: block;
+    left: -2px;
+    margin: 0 0 -15px;
+    position: relative;
+    top: -15px;
+    width: 100%;
+    display: none;
+}
+.side .levelLink.active a{
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.side .levelLink a{
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: #fff;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    margin-right: 4px;
+    padding: 10px;
+    text-decoration: none;
+    -webkit-transition: all 600ms ease-in-out;
+    -moz-transition: all 600ms ease-in-out;
+    -o-transition: all 600ms ease-in-out;
+    transition: all 600ms ease-in-out;
+}
+
+
+
+@media only screen and (max-width: 767px){
+    /*style for mobile here */
+}
+
+/*mobile*/
+@media only screen and (max-width: 40.063em) {
+    body .prgm.frame.mainMenu .title.text {
+        font-size: 26px;
+        letter-spacing: 7px;
+        padding: 0;
+        top: -30px;
+    }
+    body .mainCont {
+        background-color: red;
+        display: inline-block;
+        left: -8px;
+        margin: 0 auto;
+        max-width: none;
+        position: relative;
+        width: 103%;
+    }
+    body .side{
+        display: block;
+        left: -9px;
+        margin-bottom: -7px;
+        max-width: none;
+        position: relative;
+        width: 105%;
+    }
+    .prgm.frame {
+        width: 102%;    
+    }
+    .side .levelBarLink{
+        padding-top: 18px;  
+    }
+    .prgm.frame.mainMenu .headingText{
+        padding: 0;
+    }
+    .prgm.frame.mainMenu .buttonArea .row{
+        padding: 0;
+    }
+    .prgm.frame .menuBar .icon.info .instructions{
+        padding: 40px 22px 20px;
+        width: 290px;
+    }
+    .prgm.frame .menuBar .icon.info .instructions span{
+        display: block;
+        font-size: 12px;
+        margin: 0 0 -4px;
+        width: 100%;
+    }   
+    .prgm.frame .menuBar .icon.info {
+        top: -97px;
+    }
+    .prgm.frame .left {
+        position: relative;
+        top: -13px;
+    }
+    .prgm.frame .instructions {
+        line-height: 21px;
+    }
+    .prgm.frame .instructions span.closeIcon{
+        font-family: cursive;
+        font-size: 25px;
+        font-weight: bold;
+        position: absolute;
+        right: 52px;
+        top: 19px;
+        width: 12px !important;
+    }
+    .prgm.frame .runButtonCont button{
+        width: 100%;
+    }
+    .prgm.frame .pieceHolder{
+        height: 45px;
+        width: 21%;
+    }
+    .prgm.frame .gameArea .piece{
+        font-size: 10px;
+        height: 39px;
+        width: 100%;
+    }
+    .prgm.frame .piece{
+        font-size: 13px;
+        height: 43px;
+        width: 21%;
+    }
+    .prgm.frame .menuBar .icon.info{
+         bottom: 0;
+        display: block;
+        float: right;
+        position: absolute;
+        right: 27px;
+        top: 15px;
+    }
+    .prgm.frame .menuBar{
+        height: auto !important;
+        max-height: none;
+    }
+    .prgm.frame .title.text {
+        display: block;
+        font-size: 29px;
+        margin: 46px 0 18px;
+        padding: 0;
+        position: relative;
+        top: 10px;
+    }
+    .side.open {
+        margin: -8px auto -22px;
+    }
+
+}
+/*tab and desk*/
+@media only screen and (min-width: 40.063em){
+
+}
+/*tablet*/
+@media only screen and (min-width: 40.063em) and (max-width: 64.000em){
+
+
+}
+/*desktop*/
+@media only screen and (min-width: 64.063em) {
+
+}

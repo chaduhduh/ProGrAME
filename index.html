@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Programe</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/game.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+	<div class="side">
+		<span class="showlevels levelBarLink text" data-levelBarLink="show">Click to Show All Levels +</span>
+		<span class="hidelevels levelBarLink text" data-levelBarLink="hide">Hide Levels -</span>
+		<div class="levelLinks">
+			<span class="levelLink text active" data-levelLink="mainMenu">
+				<a href="#">Main Menu</a>
+			</span>
+			<span class="levelLink text" data-levelLink="instructionsOne">
+				<a href="#">Instructions 1</a>
+			</span>
+			<span class="levelLink text" data-levelLink="instructionsOneCont">
+				<a href="#">Instructions 1.5</a>
+			</span>
+			<span class="levelLink text" data-levelLink="instructionsTwo">
+				<a href="#">Instructions 2</a>
+			</span>
+			<span class="levelLink text" data-levelLink="instructionsTwoCont">
+				<a href="#">Instructions 2.5</a>
+			</span>
+			<span class="levelLink text" data-levelLink="test">
+				<a href="#">Level Test</a>
+			</span>
+			<span class="levelLink text" data-levelLink="one">
+				<a href="#">Level One</a>
+			</span>
+			<span class="levelLink text" data-levelLink="advanced">
+				<a href="#">Level Bit Harder</a>
+			</span>
+			<span class="levelLink text" data-levelLink="anotherChallenge">
+				<a href="#">Another Challenging one</a>
+			</span>
+		</div>
+	</div>
+
+	<div class="mainCont">
+
+
+				
+
+
+		<div class="levels">
+
+
+				<!-- ///////////////////////////////////////// 
+				|
+				|
+				|  MAIN MENU 
+				|
+				|
+				////////////////////////////////////////// -->
+					<div class="prgm frame game mainMenu active" data-level="mainMenu">
+						<div class="frameInner">
+
+
+							<!-- /////////// MENU BAR /////////// -->
+							<div class="menuBar">
+								<span class="title text center">
+									<&nbsp;ProgGrAME&nbsp;/>
+								</span>
+							</div>
+
+
+							<!-- //////////// PIECE AREA /////////// -->
+							<div class="buttonArea" data-buttonArea>
+								<div class="headingText">
+									<span class="left text">
+										Menu:
+									</span>
+								</div>
+								<div class="row">
+									<div class="button text" data-menuButton="start">
+										Start Game
+									</div>
+									<div class="button text" data-menuButton="how">
+										How to Play
+									</div>
+									<div class="button text" data-menuButton="options">
+										Options
+									</div>
+									<div class="button text" data-menuButton="load">
+										Saved Games
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				<!-- ///////////////////////////////////////// -->
+
+
+
+
+
+
+				<!-- ///////////////////////////////////////// 
+				|
+				|
+				|  LEVEL INSTRUCTIONS 1 ( FRAME - GAME ) 
+				|
+				|
+				////////////////////////////////////////// -->
+					<div class="prgm frame game level-instructions" data-level="instructionsOne">
+						<div class="frameInner">
+
+							<!-- /////////// MENU BAR /////////// -->
+							<div class="menuBar">
+								<span class="left">
+									<span class="back icon"  data-levelLink="mainMenu">
+									</span>
+								</span>
+								<span class="title text">
+									Instructions - 1
+								</span>
+								<span class="right">
+									<span class="info icon open" data-infoIcon>
+										<div class="instructions">
+											<span class="closeIcon" data-closeIcon>X</span>
+											<span class="left text small">
+												Instructions:&nbsp;&nbsp;
+											</span>
+											<span class="text">
+												Rearrange the blocks in the order specified here. After arranging blocks click 'execute program' to 
+												compile program, an alert will display results of execution. Every program (each game board) needs to 
+												be started and ended. For the first example we kept it simple and filled in the blocks for you. Simply Click execute program.
+											</span>
+										</div>
+									</span>
+								</span>
+							</div>
+
+							<!-- //////////// PIECE AREA /////////// -->
+							<div class="pieceArea" data-pieceArea>
+								<div class="headingText">
+									<span class="left text">
+										Pieces
+									</span>
+								</div>
+								<div class="row">
+									<div class="piece text action" data-piece data-value="return">
+										Return
+									</div>
+									<div class="piece text start" data-piece data-value="start">
+										Start
+									</div>
+									<div class="piece text end" data-piece data-value="end">
+										End
+									</div>
+								</div>
+							</div>
+
+							<!-- //////////// GAME AREA /////////// -->
+							<div class="gameArea">
+								<div class="headingText">
+									<span class="left text">
+										Game Area
+									</span>	
+								</div>
+								<div class="pieceBoard" data-pieceBoard>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											<div class="piece text start" data-piece data-value="start">
+												Start
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											<div class="piece text end" data-piece data-value="end">
+												End
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- //////////// EXECUTE BUTTON /////////// -->
+						<div class="runButtonCont">
+							<button class="execute button">Execute Program</button>
+						</div>
+					</div>
+				<!-- ///////////////////////////////////////// -->
+
+
+
+
+
+				<!-- ///////////////////////////////////////// 
+				|
+				|
+				|  LEVEL INSTRUCTIONS 1.5 ( FRAME - GAME ) 
+				|
+				|
+				////////////////////////////////////////// -->
+					<div class="prgm frame game level-instructionsOneCont" data-level="instructionsOneCont">
+						<div class="frameInner">
+
+							<!-- /////////// MENU BAR /////////// -->
+							<div class="menuBar">
+								<span class="left">
+									<span class="back icon"  data-levelLink="mainMenu">
+									</span>
+								</span>
+								<span class="title text">
+									Instructions - 1.5
+								</span>
+								<span class="right">
+									<span class="info icon open" data-infoIcon>
+										<div class="instructions">
+											<span class="closeIcon" data-closeIcon>X</span>
+											<span class="left text small">
+												Instructions:&nbsp;&nbsp;
+											</span>
+											<span class="text">
+												Now you try. Here is the same puzzle without the pieces placed.
+												Remember that every program needs to be started and ended.
+											</span>
+										</div>
+									</span>
+								</span>
+							</div>
+
+							<!-- //////////// PIECE AREA /////////// -->
+							<div class="pieceArea" data-pieceArea>
+								<div class="headingText">
+									<span class="left text">
+										Pieces
+									</span>
+								</div>
+								<div class="row">
+									<div class="piece text action" data-piece data-value="return">
+										Return
+									</div>
+									<div class="piece text start" data-piece data-value="start">
+										Start
+									</div>
+									<div class="piece text end" data-piece data-value="end">
+										End
+									</div>
+								</div>
+							</div>
+
+							<!-- //////////// GAME AREA /////////// -->
+							<div class="gameArea">
+								<div class="headingText">
+									<span class="left text">
+										Game Area
+									</span>	
+								</div>
+								<div class="pieceBoard" data-pieceBoard>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- //////////// EXECUTE BUTTON /////////// -->
+						<div class="runButtonCont">
+							<button class="execute button">Execute Program</button>
+						</div>
+					</div>
+				<!-- ///////////////////////////////////////// -->
+
+
+
+
+				<!-- ///////////////////////////////////////// 
+				|
+				|
+				|  LEVEL INSTRUCTIONS 2 ( FRAME - GAME ) 
+				|
+				|
+				////////////////////////////////////////// -->
+					<div class="prgm frame game level-instructionsTwo" data-level="instructionsTwo">
+						<div class="frameInner">
+
+
+							<!-- /////////// MENU BAR /////////// -->
+							<div class="menuBar">
+								<span class="left">
+									<span class="back icon" data-levelLink="mainMenu">
+									</span>
+								</span>
+								<span class="title text">
+									Instructions 2
+								</span>
+								<span class="right">
+									<span class="info icon open" data-infoIcon>								
+										<div class="instructions">
+											<span class="closeIcon" data-closeIcon>X</span>
+											<span class="left text small">
+												Instructions:&nbsp;&nbsp;
+											</span>
+											<span class="text">
+												Many programs are designed for use in junction with screens to display
+												information. Here is an example of a simple program that will output some 
+												text. See if you can finish this puzzle. Remember every program needs to 
+												be started and ended.
+											</span>
+										</div>
+									</span>
+								</span>
+							</div>
+
+
+							<!-- //////////// PIECE AREA /////////// -->
+							<div class="pieceArea" data-pieceArea>
+								<div class="headingText">
+									<span class="left text">
+										Pieces
+									</span>
+								</div>
+								<div class="row">
+									<div class="piece text action" data-piece data-value="print">
+										Print
+										<span class="quickTip" style="display: none;">
+											The Print button here tells the machine that the next value will be displayed
+											to the connected display device. 
+										</span>
+									</div>
+									<div class="piece text start" data-piece data-value="start">
+										Start
+									</div>
+									<div class="piece text end" data-piece data-value="end">
+										End
+									</div>
+									<div class="piece text string" data-piece data-value="game">
+										"game"
+									</div>
+								</div>
+							</div>
+
+							<!-- //////////// GAME AREA /////////// -->
+							<div class="gameArea">
+								<div class="headingText">
+									<span class="left text">
+										Game Area
+									</span>
+								</div>
+								<div class="pieceBoard" data-pieceBoard>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											<div class="piece text action" data-piece data-value="print">
+												Print
+											</div>
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											<div class="piece text value string" data-piece data-value="game">
+												"game"
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- //////////// EXECUTE BUTTON /////////// -->
+						<div class="runButtonCont">
+							<button class="execute button">Execute Program</button>
+						</div>
+					</div>
+				<!-- ///////////////////////////////////////// -->
+
+
+
+
+
+				<!-- ///////////////////////////////////////// 
+				|
+				|
+				|  LEVEL INSTRUCTIONS 2.5 ( FRAME - GAME ) 
+				|
+				|
+				////////////////////////////////////////// -->
+					<div class="prgm frame game level-instructionsTwoCont" data-level="instructionsTwoCont">
+						<div class="frameInner">
+
+
+							<!-- /////////// MENU BAR /////////// -->
+							<div class="menuBar">
+								<span class="left">
+									<span class="back icon" data-levelLink="mainMenu">
+									</span>
+								</span>
+								<span class="title text">
+									Instructions 2.5
+								</span>
+								<span class="right">
+									<span class="info icon open" data-infoIcon>								
+										<div class="instructions">
+											<span class="closeIcon" data-closeIcon>X</span>
+											<span class="left text small">
+												Instructions:&nbsp;&nbsp;
+											</span>
+											<span class="text">
+												Now you try to finish the whole puzzle. Order the pieces so that this program
+												will display the text "game".
+											</span>
+										</div>
+									</span>
+								</span>
+							</div>
+
+
+							<!-- //////////// PIECE AREA /////////// -->
+							<div class="pieceArea" data-pieceArea>
+								<div class="headingText">
+									<span class="left text">
+										Pieces
+									</span>
+								</div>
+								<div class="row">
+									<div class="piece text action" data-piece data-value="print">
+										Print
+										<span class="quickTip" style="display: none;">
+											The Print button here tells the machine that the next value will be displayed
+											to the connected display device. 
+										</span>
+									</div>
+									<div class="piece text start" data-piece data-value="start">
+										Start
+									</div>
+									<div class="piece text end" data-piece data-value="end">
+										End
+									</div>
+									<div class="piece text value string" data-piece data-value="game">
+										"game"
+									</div>
+								</div>
+							</div>
+
+							<!-- //////////// GAME AREA /////////// -->
+							<div class="gameArea">
+								<div class="headingText">
+									<span class="left text">
+										Game Area
+									</span>
+								</div>
+								<div class="pieceBoard" data-pieceBoard>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- //////////// EXECUTE BUTTON /////////// -->
+						<div class="runButtonCont">
+							<button class="execute button">Execute Program</button>
+						</div>
+					</div>
+				<!-- ///////////////////////////////////////// -->
+
+
+
+
+
+				<!-- ///////////////////////////////////////// 
+				|
+				|
+				|  LEVEL TEST ( FRAME - GAME ) 
+				|
+				|
+				////////////////////////////////////////// -->
+					<div class="prgm frame game level-1" data-level="test">
+						<div class="frameInner">
+
+
+							<!-- /////////// MENU BAR /////////// -->
+							<div class="menuBar">
+								<span class="left">
+									<span class="back icon" data-levelLink="mainMenu">
+									</span>
+								</span>
+								<span class="title text">
+									Level Test
+								</span>
+								<span class="right">
+									<span class="info icon open" data-infoIcon>								
+										<div class="instructions">
+											<span class="closeIcon" data-closeIcon>X</span>
+											<span class="left text small">
+												Instructions:&nbsp;&nbsp;
+											</span>
+											<span class="text">
+												Order the blocks so that this program returns the current value of 4.
+											</span>
+										</div>
+									</span>
+								</span>
+							</div>
+
+
+							<!-- //////////// PIECE AREA /////////// -->
+							<div class="pieceArea" data-pieceArea>
+								<div class="headingText">
+									<span class="left text">
+										Pieces
+									</span>
+								</div>
+								<div class="row">
+									<div class="piece text action" data-piece data-value="return">
+										Return
+									</div>
+									<div class="piece text start" data-piece data-value="start">
+										Start
+									</div>
+									<div class="piece text end" data-piece data-value="end">
+										End
+									</div>
+									<div class="piece text value twoline" data-piece data-value="currentvalue">
+										Current Value
+									</div>
+								</div>
+							</div>
+
+							<!-- //////////// GAME AREA /////////// -->
+							<div class="gameArea">
+								<div class="headingText">
+									<span class="left text">
+										Game Area
+									</span>
+									<span class="right text current">
+										Current Value: 4
+									</span>
+								</div>
+								<div class="pieceBoard" data-pieceBoard>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- //////////// EXECUTE BUTTON /////////// -->
+						<div class="runButtonCont">
+							<button class="execute button">Execute Program</button>
+						</div>
+					</div>
+				<!-- ///////////////////////////////////////// -->
+
+
+
+
+
+
+				<!-- ///////////////////////////////////////// 
+				|
+				|
+				|  LEVEL ONE ( FRAME - GAME ) 
+				|
+				|
+				////////////////////////////////////////// -->
+					<div class="prgm frame game level-1" data-level="one">
+						<div class="frameInner">
+
+							<!-- /////////// MENU BAR /////////// -->
+							<div class="menuBar">
+								<span class="left">
+									<span class="back icon" data-levelLink="mainMenu">
+									</span>
+								</span>
+								<span class="title text">
+									Level One
+								</span>
+								<span class="right">
+									<span class="info icon" data-infoIcon>
+										<div class="instructions">
+											<span class="closeIcon" data-closeIcon>X</span>
+											<span class="left text small">
+												Instructions:&nbsp;&nbsp;
+											</span>
+											<span class="text">
+												Order the blocks so that this program will run without error. Note that you always will need to start and end your program.
+											</span>
+										</div>
+									</span>
+								</span>
+							</div>
+
+							<!-- //////////// PIECE AREA /////////// -->
+							<div class="pieceArea" data-pieceArea>
+								<div class="headingText">
+									<span class="left text">
+										Pieces
+									</span>
+								</div>
+								<div class="row">
+									<div class="piece text action" data-piece data-value="return">
+										Return
+									</div>
+									<div class="piece text start" data-piece data-value="start">
+										Start
+									</div>
+									<div class="piece text end" data-piece data-value="end">
+										End
+									</div>
+								</div>
+							</div>
+
+							<!-- //////////// GAME AREA /////////// -->
+							<div class="gameArea">
+								<div class="headingText">
+									<span class="left text">
+										Game Area
+									</span>	
+								</div>
+								<div class="pieceBoard" data-pieceBoard>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- //////////// EXECUTE BUTTON /////////// -->
+						<div class="runButtonCont">
+							<button class="execute button">Execute Program</button>
+						</div>
+					</div>
+				<!-- ///////////////////////////////////////// -->
+
+
+
+
+
+
+				<!-- ///////////////////////////////////////// 
+				|
+				|
+				|  A BIT HARDER ( FRAME - GAME ) 
+				|
+				|
+				////////////////////////////////////////// -->
+					<div class="prgm frame game level-1" data-level="advanced">
+						<div class="frameInner">
+
+							<!-- /////////// MENU BAR /////////// -->
+							<div class="menuBar">
+								<span class="left">
+									<span class="back icon" data-levelLink="mainMenu">
+									</span>
+								</span>
+								<span class="title text">
+									A Bit Harder
+								</span>
+								<span class="right">
+									<span class="info icon" data-infoIcon>
+										<div class="instructions">
+											<span class="closeIcon" data-closeIcon>X</span>
+											<span class="left text small">
+												Instructions:&nbsp;&nbsp;
+											</span>
+											<span class="text">
+												Order the blocks so that this program will return a value of 6
+											</span>
+										</div>
+									</span>
+								</span>
+							</div>
+
+							<!-- //////////// PIECE AREA /////////// -->
+							<div class="pieceArea" data-pieceArea>
+								<div class="headingText">
+									<span class="left text">
+										Pieces
+									</span>
+								</div>
+								<div class="row">
+									<div class="piece text action" data-piece data-value="return">
+										Return
+									</div>
+									<div class="piece text start" data-piece data-value="start">
+										Start
+									</div>
+									<div class="piece text operator large" data-piece data-value="divide">
+										/
+									</div>
+									<div class="piece text end" data-piece data-value="end">
+										End
+									</div>
+									<div class="piece text operator  large" data-piece data-value="equals">
+										=
+									</div>
+									<div class="piece text num large" data-piece data-value="five">
+										5
+									</div>
+									<div class="piece text value twoline" data-piece data-value="newvalue">
+										New Value
+									</div>
+									<div class="piece text num large" data-piece data-value="two">
+										2
+									</div>
+									<div class="piece text operator large" data-piece data-value="plus">
+										+
+									</div>
+									<div class="piece text value twoline" data-piece data-value="currentvalue">
+										Current Value
+									</div>
+								</div>
+							</div>
+
+							<!-- //////////// GAME AREA /////////// -->
+							<div class="gameArea">
+								<div class="headingText">
+									<span class="left text">
+										Game Area
+									</span>
+									<span class="right text current">
+										Current Value: 4
+									</span>
+								</div>
+								<div class="pieceBoard" data-pieceBoard>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- //////////// EXECUTE BUTTON /////////// -->
+						<div class="runButtonCont">
+							<button class="execute button">Execute Program</button>
+						</div>
+					</div>
+				<!-- ///////////////////////////////////////// -->
+
+
+
+
+
+				<!-- ///////////////////////////////////////// 
+				|
+				|
+				|  ANOTHER CHALLENGE ( FRAME - GAME ) 
+				|
+				|
+				////////////////////////////////////////// -->
+					<div class="prgm frame game anotherChallenge" data-level="anotherChallenge">
+						<div class="frameInner">
+
+							<!-- /////////// MENU BAR /////////// -->
+							<div class="menuBar">
+								<span class="left">
+									<span class="back icon" data-levelLink="mainMenu">
+									</span>
+								</span>
+								<span class="title text">
+									A Bit Harder
+								</span>
+								<span class="right">
+									<span class="info icon" data-infoIcon>
+										<div class="instructions">
+											<span class="closeIcon" data-closeIcon>X</span>
+											<span class="left text small">
+												Instructions:&nbsp;&nbsp;
+											</span>
+											<span class="text">
+												Order the blocks so that this program will print "yes" the same number 
+												of times that current value is(if value is 3 print "yes" 3 times). After 
+												printing yes specified # of times print the text "Done" once.
+											</span>
+										</div>
+									</span>
+								</span>
+							</div>
+
+							<!-- //////////// PIECE AREA /////////// -->
+							<div class="pieceArea" data-pieceArea>
+								<div class="headingText">
+									<span class="left text">
+										Pieces
+									</span>
+								</div>
+								<div class="row">
+									<div class="piece text action" data-piece data-value="while">
+										While
+									</div>
+									<div class="piece text start" data-piece data-value="start">
+										Start
+									</div>
+									<div class="piece text operator large" data-piece data-value="lessthan">
+										<
+									</div>
+									<div class="piece text end" data-piece data-value="end">
+										End
+									</div>
+									<div class="piece text operator  large" data-piece data-value="plusplus">
+										++
+									</div>
+									<div class="piece text num action twoline" data-piece data-value="endwhile">
+										end while
+									</div>
+									<div class="piece text value twoline" data-piece data-value="currentvalue">
+										Current Value
+									</div>
+									<div class="piece text value" data-piece data-value="counter">
+										Counter
+									</div>
+									<div class="piece text num action" data-piece data-value="print">
+										Print
+									</div>
+									<div class="piece text finished string" data-piece data-value="done">
+										"Done"
+									</div>
+									<div class="piece text value string" data-piece data-value="yes">
+										"yes"
+									</div>
+								</div>
+							</div>
+
+							<!-- //////////// GAME AREA /////////// -->
+							<div class="gameArea">
+								<div class="headingText">
+									<span class="left text">
+										Game Area
+									</span>
+									<span class="right text current">
+										Current Value: 4
+									</span>
+								</div>
+								<div class="pieceBoard" data-pieceBoard>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row indent">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row indent">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+									<div class="row">
+										<div class="pieceHolder" data-pieceHolder>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- //////////// EXECUTE BUTTON /////////// -->
+						<div class="runButtonCont">
+							<button class="execute button">Execute Program</button>
+						</div>
+					</div>
+				<!-- ///////////////////////////////////////// -->
+			
+				<div class="row">
+				 	<div class="columns medium-3 medium-centered">
+				 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- Basic Ad -->
+						<ins class="adsbygoogle"
+						     style="display:block"
+						     data-ad-client="ca-pub-7370488325216209"
+						     data-ad-slot="1784014774"
+						     data-ad-format="auto"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+				 	</div>
+				 </div>
+
+
+
+		</div><!-- levels -->
+
+		<div class="mainScreen" style="display: none;">
+
+		</div>
+
+
+	</div>	
+	<script>
+		$( document ).ready(function() {
+
+			var startGameLink = $("[data-menuButton='start']");
+			var mainMenu = $("div[data-level='mainMenu']");
+			var levelBarOpenLink = $("span[data-levelBarLink='show']");
+			var levelBarCloseLink = $("span[data-levelBarLink='hide']");
+
+
+			
+			levelBarOpenLink.on( "click", function() {
+				$(this).parent("div.side").addClass("open");
+				$(this).hide();
+				levelBarCloseLink.css('display', 'block');
+			});
+
+			levelBarCloseLink.on( "click", function() {
+				$(this).parent("div.side").removeClass("open");
+				$(this).hide();
+				levelBarOpenLink.show();
+			});
+
+			startGameLink.on( "click", function() {
+				mainMenu.removeClass("active");
+				$("[data-levelLink='instructionsOne']").addClass("active");
+				$("[data-levelLink='mainMenu']").removeClass("active");
+				$(".side").show();
+				$(".level-instructions").addClass("active");
+			});
+
+			var level = function(ID, solution){
+				//------ declarations
+				var currentSelectedHtml;
+				var currentSelectedValue;
+				var gameId = $("div[data-level='" + ID + "']");
+				var currentPiece ="";
+				var pieceHolder = gameId.find("[data-pieceHolder]");
+				var piece = gameId.find("[data-pieceArea] [data-piece]");
+				var execute = gameId.find("[data-execute]");
+				var solution = solution;
+				var pieceBoard = gameId.find("[data-pieceBoard]");
+				var pieceHolder = gameId.find("[data-pieceHolder]");
+				var infoIcon = gameId.find("[data-infoIcon]");
+				var levelLink = $("[data-levelLink]");
+
+				//------ main
+				currentPiece = piece.click(getSelectedPiece);
+
+				pieceHolder.on( "click", function() {
+			  		currentPieceHolder = $(this);
+			  		var pieceHolderContents = currentPieceHolder.find("div.piece").attr("data-value");
+			  		var currentPieceValue = currentPiece.attr('data-value');
+
+			  		if(currentPiece.template && pieceHolderContents != currentPieceValue){
+			  			currentPieceHolder.html('');
+			  			currentPieceHolder.append(currentPiece.template);
+			  		}
+			  		else{
+			  			currentPieceHolder.html('');
+			  		}	
+				});
+
+
+				gameId.find("button").on( "click", function() {
+					var result = false;
+		
+					result = checkGameBoard();
+					if(result == true){
+						var thisGame = $(this).closest(".prgm.frame.game");
+						var levelLink = $("span[data-levelLink]");
+						var thisLevelLink = $("span[data-levelLink='" + thisGame.next().attr("data-level") + "']");
+
+
+						alert("Program Compiled\n You Win!!!");//show animation here instead of an alert
+						clearBoard();
+						//alert($(this).closest(".prgm.frame.game"));
+						
+						thisGame.next().toggleClass("active");
+						thisGame.toggleClass("active");
+						levelLink.removeClass("active");
+						thisLevelLink.addClass("active");	
+					}
+					else{
+						alert("!! Program Error !!")
+					}
+
+				});
+
+				infoIcon.on( "click", function() {
+					$(this).toggleClass("open");
+				});
+
+				infoIcon.find("[data-closeIcon]").on( "click", function() {
+					$(this).removeClass("open");
+				});
+
+				levelLink.on( "click", function() {
+					var selector = ".prgm.frame[data-level='" + $(this).attr("data-levelLink") + "']";
+					$(this).addClass("active");
+					$(this).siblings().removeClass("active");
+					$(selector).addClass("active");
+					$(selector).siblings().removeClass("active");
+				});
+
+				// -- functions
+				function getSelectedPiece(){
+					//the wrap . unwrap here replaces an outer html function
+					currentPiece = $(this);
+					currentPiece.siblings().removeClass("selected");
+					currentPiece.addClass("selected");
+				  	currentPiece.template = currentPiece.wrap('<span/>').parent().html();
+				  	currentPiece.unwrap('<span/>').parent().html();
+
+				  	return currentPiece;
+				}
+
+
+				function checkGameBoard(){
+					var values = getPieceBoardValues();
+					var solutionSetCount = 0;
+					var isWinner = false;
+					
+					while(solutionSetCount < solution.length){//loop through solution sets
+						var count = 0;
+						var correctAnswerCount = 0;
+
+						while(count < solution[solutionSetCount].length){//loop through solutions of this sset
+							if(solution[solutionSetCount][count] == values[count]){
+								correctAnswerCount++;
+							}
+							if(correctAnswerCount == solution[solutionSetCount].length){
+								isWinner = true;
+							}
+
+							//-- endwhile
+							count++;
+						}
+
+						//-- enddwhile
+						solutionSetCount++
+					}
+
+					if(isWinner){
+						return true;
+					}else{
+						return false;
+					}
+
+				}
+
+				function getPieceBoardValues(){
+					var values = [];
+
+					gameId.find("[data-pieceBoard] [data-pieceHolder]").each(function( index ) {
+					  values[index] = $( this ).find('[data-piece]').attr('data-value') || 'EMPTY';
+					});
+
+					return values;
+				}
+
+				function clearBoard(){
+					gameId.find("[data-pieceBoard] [data-pieceHolder]").each(function( index ) {
+					  $( this ).html('');
+					});
+				}
+
+				return this;
+			}
+
+
+
+			//----------------------------------------------------------------------------------------
+			//	EXAMPLE OF HOW A LEVEL IS SET UP
+			//
+			// 	var levelExample = level(
+			// 		"[SELCTOR OF GAME HTML]", [
+			// 			["SOLUTION", "SET", "HERE"],
+			// 			["ANOTHER-POSSIBLE", " SOLUTION", "HERE"]
+			// 		]
+			// 	);
+			//----------------------------------------------------------------------------------------
+
+			var instructionsOne = level(
+					"instructionsOne", [
+						["start","end"]
+					]
+			);
+
+			var instructionsOneCont = level(
+					"instructionsOneCont", [
+						["start","end"]
+					]
+			);
+
+			var instructionsTwo = level(
+					"instructionsTwo", [
+						["start", "print" , "game" , "end"]
+					]
+			);
+
+			var instructionsTwoCont = level(
+					"instructionsTwoCont", [
+						["start", "print" , "game" , "end"]
+					]
+			);
+
+			var levelTest = level(
+					"test", [
+						["start","return", "currentvalue", "end"]
+					]
+			);
+
+			var levelOne = level(
+				"one", [
+					["start","end"]
+				]
+			);
+
+			var advanced = level(
+				"advanced", [
+					["start", "newvalue", "equals", "currentvalue", "plus", "two", "return", "newvalue", "end"],
+					["start", "newvalue", "equals", "two", "plus", "currentvalue", "return", "newvalue", "end"]
+				]
+			);
+
+			var anotherChallenge = level(
+				"anotherChallenge", [
+					["start", "while", "counter", "lessthan", "currentvalue", "print", "yes", "counter", "plusplus",
+					 "endwhile", "print", "done", "end"],
+					["start", "while", "counter", "lessthan", "currentvalue", "counter", "plusplus", "print", "yes",
+					 "endwhile", "print", "done", "end"]
+				]
+			);
+
+		});
+	</script>
+
+</body>
+</html>
