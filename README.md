@@ -1,5 +1,5 @@
 # < ProgGrAME /> 
-An education game to teach some basic programming logic. Designed as a puzzle game.
+An educational game to teach some basic programming logic. Designed as a puzzle game.
 
 # Demo
 Live demo: http://programe.chaddmyers.com/
